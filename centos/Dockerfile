@@ -1,0 +1,12 @@
+FROM saltstack/centos-6
+MAINTAINER Alexis MP "alexis.mp@gmail.com"
+
+# Update list of packages
+RUN yum check-update
+
+# install Java 7
+RUN su -c "yum install java-1.7.0-openjdk-devel"
+
+# set a bunch of environment variables
+#ENV JAVA_HOME /usr/lib/jvm/java-7-openjdk-amd64/
+#ENV PATH $JAVA_HOME/bin:$PATH
