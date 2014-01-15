@@ -8,5 +8,5 @@ RUN yum check-update
 RUN su -c "yum --assumeyes install java-1.7.0-openjdk-devel"
 
 # set a bunch of environment variables
-#ENV JAVA_HOME /usr/lib/jvm/java-7-openjdk-amd64/
-#ENV PATH $JAVA_HOME/bin:$PATH
+ENV JAVA_HOME /usr/lib/jvm/java-1.7.0-openjdk.x86_64
+ENV PATH $JAVA_HOME/bin:$PATH
